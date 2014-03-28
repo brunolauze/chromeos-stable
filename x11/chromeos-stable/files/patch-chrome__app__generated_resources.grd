@@ -1,0 +1,33 @@
+--- chrome/app/generated_resources.grd.orig	2014-03-27 06:27:04.612210509 -0600
++++ chrome/app/generated_resources.grd	2014-03-27 06:28:02.160207605 -0600
+@@ -604,11 +604,9 @@
+       </message>
+ 
+       <!-- content area context menus -->
+-      <if expr="is_macosx or is_linux">
+-          <message name="IDS_CONTENT_CONTEXT_LOOK_UP_IN_DICTIONARY" desc="The name of the 'Look Up in Dictionary' item in the content area context menu.  To translate, launch /Applications/TextEdit.app in an appropriately localized version of OS X, right-click on the text entry area and use the translation from there.">
+-            Look Up in Dictionary
+-          </message>
+-      </if>
++      <message name="IDS_CONTENT_CONTEXT_LOOK_UP_IN_DICTIONARY" desc="The name of the 'Look Up in Dictionary' item in the content area context menu.  To translate, launch /Applications/TextEdit.app in an appropriately localized version of OS X, right-click on the text entry area and use the translation from there.">
++        Look Up in Dictionary
++      </message>
+       <if expr="not pp_ifdef('use_titlecase')">
+         <message name="IDS_CONTENT_CONTEXT_BACK" desc="The name of the Back command in the content area context menu">
+           &amp;Back
+@@ -15292,7 +15290,6 @@
+     </if>
+ 
+     <!-- Local Device Discovery display strings -->
+-    <if expr="pp_ifdef('enable_mdns')">
+       <message name="IDS_LOCAL_DISCOVERY_SERVICE_REGISTER" desc="Table header for registering a service">
+         Register
+       </message>
+@@ -15398,7 +15395,6 @@
+       <message name="IDS_LOCAL_DISCOVERY_NOTIFICATIONS_DISABLE_BUTTON_LABEL" desc="Label for button disabling local device notifications">
+         Don't show this again
+       </message>
+-    </if>
+     <!-- People search strings -->
+     <message name="IDS_PEOPLE_SEARCH_ACTION_EMAIL_TOOLTIP" desc="Tooltip text for sending an email to the person in the result">
+       Email this person

@@ -1,5 +1,5 @@
---- ./content/content_browser.gypi.orig	2014-03-04 03:17:48.000000000 +0100
-+++ ./content/content_browser.gypi	2014-03-07 14:10:33.000000000 +0100
+--- content/content_browser.gypi.orig	2014-03-14 21:21:14.000000000 -0600
++++ content/content_browser.gypi	2014-03-26 19:49:16.361848970 -0600
 @@ -586,6 +586,8 @@
      'browser/geolocation/wifi_data_provider_common_win.cc',
      'browser/geolocation/wifi_data_provider_common_win.h',
@@ -9,7 +9,7 @@
      'browser/geolocation/wifi_data_provider_linux.cc',
      'browser/geolocation/wifi_data_provider_linux.h',
      'browser/geolocation/wifi_data_provider_mac.cc',
-@@ -1543,8 +1545,18 @@
+@@ -1543,8 +1545,19 @@
        ],
      }],
      ['os_bsd==1', {
@@ -26,11 +26,12 @@
 +        'browser/download/file_metadata_linux.cc',
 +        'browser/gamepad/gamepad_platform_data_fetcher_linux.cc',
 +        'browser/geolocation/wifi_data_provider_linux.cc',
++	'browser/geolocation/wifi_data_provider_chromeos.cc',
 +        'browser/udev_linux.cc',
        ],
      }],
      ['use_aura!=1 and OS!="win"', {
-@@ -1635,7 +1647,7 @@
+@@ -1635,7 +1648,7 @@
          'browser/geolocation/empty_wifi_data_provider.cc',
        ],
      }],

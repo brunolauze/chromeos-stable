@@ -1,5 +1,23 @@
---- ./chrome/browser/ui/webui/about_ui.cc.orig	2014-03-04 03:17:09.000000000 +0100
-+++ ./chrome/browser/ui/webui/about_ui.cc	2014-03-07 14:10:32.000000000 +0100
+--- chrome/browser/ui/webui/about_ui.cc.orig	2014-03-14 21:21:55.000000000 -0600
++++ chrome/browser/ui/webui/about_ui.cc	2014-03-27 12:05:01.780815145 -0600
+@@ -477,7 +477,7 @@
+   output.append(base::StringPrintf("<a href='%s%s'>Discard tab now</a>",
+                                    chrome::kChromeUIDiscardsURL,
+                                    kRunCommand));
+-
++#if !defined(OS_FREEBSD)
+   base::SystemMemoryInfoKB meminfo;
+   base::GetSystemMemoryInfo(&meminfo);
+   output.append("<h3>System memory information in MB</h3>");
+@@ -510,7 +510,7 @@
+   output.append(AddStringRow(
+       "Graphics", base::IntToString(meminfo.gem_size / 1024 / 1024)));
+   output.append("</table>");
+-
++#endif
+   AppendFooter(&output);
+   return output;
+ }
 @@ -766,7 +766,7 @@
    return data;
  }

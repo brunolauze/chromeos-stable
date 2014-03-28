@@ -75,7 +75,6 @@ GYP_DEFINES+=	use_cups=1 \
 		use_ash=1 \
 		use_mojo=1 \
 		enable_extensions=1 \
-		component=shared_library \
 		werror= \
 		no_gc_sections=1 \
 		os_ver=${OSVERSION} \

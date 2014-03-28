@@ -1,5 +1,5 @@
---- ./chrome/browser/memory_details.cc.orig	2014-03-04 03:17:18.000000000 +0100
-+++ ./chrome/browser/memory_details.cc	2014-03-07 14:10:32.000000000 +0100
+--- chrome/browser/memory_details.cc.orig	2014-03-14 21:22:08.000000000 -0600
++++ chrome/browser/memory_details.cc	2014-03-27 13:18:39.298509433 -0600
 @@ -31,7 +31,7 @@
  #include "grit/generated_resources.h"
  #include "ui/base/l10n/l10n_util.h"
@@ -27,3 +27,12 @@
      if (process.pid == zygote_pid) {
        process.process_type = content::PROCESS_TYPE_ZYGOTE;
      } else if (process.pid == sandbox_helper_pid) {
+@@ -462,7 +462,7 @@
+   }
+   UMA_HISTOGRAM_MEMORY_KB("Memory.BackingStore",
+                           RenderWidgetHost::BackingStoreMemorySize() / 1024);
+-#if defined(OS_CHROMEOS)
++#if defined(OS_CHROMEOS) && !defined(OS_FREEBSD)
+   // Chrome OS exposes system-wide graphics driver memory which has historically
+   // been a source of leak/bloat.
+   base::SystemMemoryInfoKB meminfo;

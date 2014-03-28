@@ -3,10 +3,8 @@ TEST_TARGETS=	base_unittests \
 		crypto_unittests \
 		cacheinvalidation_unittests \
 		gpu_unittests \
-		sync_unit_tests \
 		printing_unittests \
 		sql_unittests \
-		content_unittests \
 		cc_unittests \
 		ui_unittests \
 		url_unittests \
@@ -15,6 +13,10 @@ TEST_TARGETS=	base_unittests \
 		dbus_unittests \
 		net_unittests \
 		media_unittests
+
+
+#sync_unittests
+
 # browser_tests: missing test file?
 # unit_tests: missing test file?
 # chromedriver_unittests: does not build

@@ -1,5 +1,5 @@
---- ./chrome/chrome_browser.gypi.orig	2014-03-04 03:17:18.000000000 +0100
-+++ ./chrome/chrome_browser.gypi	2014-03-07 14:10:32.000000000 +0100
+--- chrome/chrome_browser.gypi.orig	2014-03-14 21:22:17.000000000 -0600
++++ chrome/chrome_browser.gypi	2014-03-27 13:37:48.622431416 -0600
 @@ -2891,7 +2891,7 @@
              '../device/media_transfer_protocol/media_transfer_protocol.gyp:device_media_transfer_protocol',
            ],
@@ -18,14 +18,12 @@
            'sources': [
              'app/chrome_breakpad_client.cc',
              'app/chrome_breakpad_client.h',
-@@ -3272,6 +3272,25 @@
+@@ -3272,6 +3272,23 @@
              ['exclude', '^browser/usb/'],
            ],
          }],
 +        ['os_bsd==1', {
 +          'sources/': [
-+            ['exclude', '^browser/chrome_browser_main_linux.cc'],
-+            ['exclude', '^browser/chrome_browser_main_linux.h'],
 +            ['exclude', '^browser/media_galleries/linux/'],
 +            ['exclude', '^browser/storage_monitor/media_transfer_protocol_device_observer_linux.cc'],
 +            ['exclude', '^browser/storage_monitor/media_transfer_protocol_device_observer_linux.h'],
